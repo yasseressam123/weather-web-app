@@ -1,10 +1,11 @@
 import './app-weather-display.css';
-import React, {useEffect,useState} from 'react';
+import React, {useEffect} from 'react';
 
 const AppWeatherDisplay = (props)=>{
     console.log("c2",props);
     const today = new Date();
-    const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    const date = today.toLocaleString('en-us', {weekday:'long'})+' '+(today.getMonth()+1)+', '+today.getFullYear();
+    console.log("fff",today);
     let temp = '';
     let apparentTemperature = '';
     let dewPoint = '';
