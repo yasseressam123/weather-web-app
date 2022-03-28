@@ -24,10 +24,10 @@ const AppHeader = (props)=>{
             <h1>INSTAWEATHER</h1>
             <div className='btn-container'>
                 <div>
-                    <button onClick={() => tempChange('c')}>C</button>
+                    <button className={localStorage.getItem('tempMod') === 'c' ? 'active' : ''} onClick={() => tempChange('c')}>C</button>
                 </div>
                 <div>
-                    <button onClick={() => tempChange('f')}>F</button>
+                    <button className={localStorage.getItem('tempMod') === 'f' ? 'active' : ''} onClick={() => tempChange('f')}>F</button>
                 </div>
             </div>
         </div>

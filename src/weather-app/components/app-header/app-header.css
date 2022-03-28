@@ -11,3 +11,9 @@
     outline: none;
     color: white;
 }
+.btn-container .active{
+    background-color: #ffffff2e;
+    border-left: white 1px solid;
+    width: 35px;
+    height: 35px;
+}

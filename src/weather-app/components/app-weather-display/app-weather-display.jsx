@@ -16,9 +16,12 @@ const AppWeatherDisplay = (props)=>{
         console.log(props);
         let tempMod = localStorage.getItem('tempMod');
         if(tempMod === 'c'){
-            temp = (5/9) * (props.data.currently.temperature - 32);
-            apparentTemperature = (5/9) * (props?.data?.currently?.apparentTemperature - 32);
-            dewPoint = (5/9) * (props?.data?.currently?.dewPoint - 32);
+            let tempVal = props.data.currently ? props.data.currently.temperature : '';
+            let apptempVal = props?.data?.currently ? props?.data?.currently?.apparentTemperature : '';
+            let dewPointVal = props?.data?.currently? props?.data?.currently?.dewPoint : '';
+            temp = (5/9) * (tempVal - 32);
+            apparentTemperature = (5/9) * (apptempVal - 32);
+            dewPoint = (5/9) * (dewPointVal - 32);
         }else if(tempMod === 'f'){
             temp = props?.data?.currently ? props?.data?.currently?.temperature : '';
             apparentTemperature = props?.data?.currently ? props?.data?.currently.apparentTemperature : '';
