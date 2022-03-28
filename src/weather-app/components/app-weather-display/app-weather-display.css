@@ -1,0 +1,9 @@
+.app-weather-display{
+    display: flex;
+    justify-content: space-between;
+}
+.app-weather-display img{
+    width: 97px;
+    height: 97px;
+    object-fit: scale-down;
+}

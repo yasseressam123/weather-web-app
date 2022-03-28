@@ -2,3 +2,12 @@
     display: flex;
     justify-content: space-between;
 }
+.app-header .btn-container{
+    display: flex;
+}
+.btn-container button{
+    background: transparent;
+    border: 0px;
+    outline: none;
+    color: white;
+}

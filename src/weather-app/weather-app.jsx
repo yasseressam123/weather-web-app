@@ -9,6 +9,7 @@ import AppWeatherDisplay from './components/app-weather-display/app-weather-disp
 const WeatherApp = ()=>{
     const [data , setData] = useState({});
 
+
     
     useEffect(()=>{
        const success=(pos) => {

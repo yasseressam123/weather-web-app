@@ -1,20 +1,25 @@
 import './app-weather-display.css';
+import React, {useEffect,useState} from 'react';
 
 const AppWeatherDisplay = (props)=>{
     const today = new Date();
     const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    let temp = '';
+    let apparentTemperature = '';
+    let dewPoint = '';
+
     return(
-        <div>
+        <div className='app-weather-display'>
             <div>
                 <h2>New Cairo</h2>
                 <p>{date}</p>
-                <img src="../../../assets/CurrentIcon.png" alt="cloudy" />
-                <p>{props.data.currently.summary}</p>
+                <img src={require('../../../assets/CurrentIcon.png')} alt="cloudy" />
+                {/* <p>{props.data.currently.summary}</p> */}
             </div>
             <div>
-                <h1>{props.data.currently.temperature}</h1>
-                <p><span>{props.data.currently.apparentTemperature}</span>/<span>{props.data.currently.dewPoint}</span></p>
-                <p>{props.data.hourly.summary}</p>
+                <h1>{temp}&#176;</h1>
+                <p><span>{apparentTemperature}&#176;</span>/<span>{dewPoint}&#176;</span></p>
+                {/* <p>{props.data.hourly.summary}</p> */}
             </div>
         </div>
     )
