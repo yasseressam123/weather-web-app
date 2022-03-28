@@ -8,12 +8,12 @@ const AppWeatherDisplay = (props)=>{
             <div>
                 <h2>New Cairo</h2>
                 <p>{date}</p>
-                <img src="../../../assets/Current Icon.png" alt="cloudy" />
-                <p>{props.data.summary}</p>
+                <img src="../../../assets/CurrentIcon.png" alt="cloudy" />
+                <p>{props.data.currently.summary}</p>
             </div>
             <div>
-                <h1>{props.data.temperature}</h1>
-                <p><span>{props.data.apparentTemperature}</span>/<span>{props.data.dewPoint}</span></p>
+                <h1>{props.data.currently.temperature}</h1>
+                <p><span>{props.data.currently.apparentTemperature}</span>/<span>{props.data.currently.dewPoint}</span></p>
                 <p>{props.data.hourly.summary}</p>
             </div>
         </div>
