@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+visit https://cors-anywhere.herokuapp.com/ and click on the "Request temporary access to the demo server" button, to temporarily restore the full functionality of CORS Anywhere for your client only.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
